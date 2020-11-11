@@ -13,7 +13,7 @@ digits_pun = list(string.ascii_lowercase*10 + string.digits*10 + string.punctuat
 upp_pun = list(string.ascii_lowercase*10 + string.ascii_uppercase*10 +string.punctuation*5)
 
 
-#Yeah, bad code, but couldn`t come up with a better idea
+#Yeah, spaghetti code, but couldn`t come up with a better idea
 def generate(LEN,flags=None,how_many=None):
     passwords = []
     U,D,P = None,None,None

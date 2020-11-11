@@ -10,3 +10,12 @@ class PasswordGenerationForm(FlaskForm):
     Punctuation_field = BooleanField("Punctuation")
     submit = SubmitField('Generate !')
     valid = False
+
+class PasswordGenerationFormRu(FlaskForm):
+	length = IntegerField('Длина (1-100(Числа))', validators = [DataRequired(),NumberRange(min=1,max=100)],default=10)
+	how_many_passwords = IntegerField('Как много паролей (1-20)',validators=[DataRequired(),NumberRange(min=1,max=20)],default=1)
+	Upper_register_field = BooleanField("Верхний регистр")
+	Digits_field = BooleanField("Цифры")
+	Punctuation_field = BooleanField("Пунктуация")
+	submit = SubmitField('Сгенерировать !')
+	valid = False
